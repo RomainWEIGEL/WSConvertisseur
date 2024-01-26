@@ -10,8 +10,9 @@
         {
         }
 
-        public Devise(string? nomDevise, double taux)
+        public Devise(int id, string? nomDevise, double taux)
         {
+            this.Id = id;
             this.NomDevise = nomDevise;
             this.Taux = taux;
         }
