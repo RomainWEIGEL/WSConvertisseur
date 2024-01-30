@@ -62,7 +62,7 @@ namespace ConvertisseurWS.Controllers
         [HttpPost]
         public ActionResult<Devise> Post([FromBody] Devise devise)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || devise.NomDevise == null)
             {
                 return BadRequest(ModelState);
             }
